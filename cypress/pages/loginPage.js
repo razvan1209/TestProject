@@ -4,6 +4,7 @@ class LoginPage {
     passwordTextbox: () => cy.get('input#password'),
     loginButton: () => cy.get('button#submit'),
     errorMessage: () => cy.get('div#error'),
+    successMessage: () => cy.get('div.post-header h1'),
   };
 
   typeUsername(username) {
@@ -20,6 +21,10 @@ class LoginPage {
 
   getErrorMessage() {
     return this.elements.errorMessage();
+  }
+
+  getSuccessMessage() {
+    return this.elements.successMessage();
   }
 }
 

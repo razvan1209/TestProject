@@ -21,6 +21,7 @@ describe('Login Test Suite', () => {
       .should('contain.value', loginData.correctPassword);
     loginPage.clickLoginButton();
     cy.url().should('contain', 'successfully');
+    loginPage.getSuccessMessage().should('contain.text', 'Logged In');
   });
 
   it('should not be able to login having wrong password', () => {
@@ -35,5 +36,19 @@ describe('Login Test Suite', () => {
     loginPage
       .getErrorMessage()
       .should('contain.text', 'Your password is invalid!');
+  });
+
+  it('should not be able to login having wrong username', () => {
+    loginPage
+      .typeUsername(loginData.incorrectUsername)
+      .should('contain.value', loginData.incorrectUsername);
+    loginPage
+      .typePassword(loginData.correctPassword)
+      .should('contain.value', loginData.correctPassword);
+    loginPage.clickLoginButton();
+    loginPage
+      .getErrorMessage()
+      .should('be.visible')
+      .and('contain.text', 'Your username is invalid!');
   });
 });

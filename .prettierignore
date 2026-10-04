@@ -1,0 +1,11 @@
+node_modules/
+cypress/screenshots/
+cypress/videos/
+cypress/support
+dist/
+build/
+coverage/
+package.json
+package-lock.json
+cypress.config.js
+.vscode

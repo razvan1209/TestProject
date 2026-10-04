@@ -1,0 +1,14 @@
+node_modules/
+
+cypress/screenshots/
+cypress/videos/
+
+coverage/
+dist/
+build/
+
+.env
+.env.*
+.vscode
+
+.DS_Store

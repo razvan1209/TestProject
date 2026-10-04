@@ -35,7 +35,7 @@ describe('Login Test Suite', () => {
     loginPage.getErrorMessage().should('be.visible');
     loginPage
       .getErrorMessage()
-      .should('contain.text', 'Your password is invalid!');
+      .should('contain.text', 'Your password is invalid');
   });
 
   it('should not be able to login having wrong username', () => {

@@ -6,8 +6,8 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run --browser chrome",
-    "cy:run:headed":"cypress run --browser chrome --headed --spec 'cypress/test/regression/**.spec.js'",
-    "prettier:write": "prettier -- write .",
+    "cy:run:headed":"cypress run --browser chrome --headed --spec 'cypress/test/regression/*.spec.js'",
+    "prettier:write": "prettier --write .",
     "prettier:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
